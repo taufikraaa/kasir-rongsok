@@ -67,7 +67,7 @@ function defaultDB(){
       {id:uid(),name:"-------------------",buy:0,stock:0},
       {id:uid(),name:"KUNINGAN",buy:115000,stock:0},
       {id:uid(),name:"KUNINGAN RADIATOR",buy:80000,stock:0},
-      {id:uid(),name:"------------------------",buy:0,stock:0},
+      {id:uid(),name:"-------------------",buy:0,stock:0},
       {id:uid(),name:"ANHAS",buy:22000,stock:0},
       {id:uid(),name:"STAINLESS",buy:10000,stock:0},
       {id:uid(),name:"-------------------",buy:0,stock:0},
@@ -84,7 +84,7 @@ function defaultDB(){
       {id:uid(),name:"BOTOL ANGGUR",buy:500,stock:0},
       {id:uid(),name:"BOTOL ANGGUR KECIL",buy:250,stock:0},
       {id:uid(),name:"BOTOL MARJAN",buy:150,stock:0},
-      {id:uid(),name:"-----------------------------",buy:0,stock:0},
+      {id:uid(),name:"-------------------",buy:0,stock:0},
       {id:uid(),name:"DINAMO",buy:10000,stock:0}
     ],
     purchases:[]
