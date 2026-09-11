@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rongsok Jembar - Kasir</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+<div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+<aside class="sidebar" id="sidebar">
+  <div class="brand">
+    <img class="brand-logo" src="pict/logo.png" alt="Rongsok Jembar">
+    <div class="brand-text"><b>RONGSOK <span>JEMBAR</span></b><small>Dari Sampah Jadi Berkah</small></div>
+  </div>
+  <button class="nav active" data-page="dashboard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg><span>Dashboard</span></button>
+  <button class="nav" data-page="pembelian"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2 3h2l2.5 12.5a2 2 0 0 0 2 1.5h9a2 2 0 0 0 2-1.5L22 7H6"/></svg><span>Pembelian</span></button>
+  <button class="nav" data-page="stok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 8L12 3 3 8l9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg><span>Stok Barang</span></button>
+  <button class="nav" data-page="harga"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><span>Daftar Harga</span></button>
+  <button class="nav" data-page="laporan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6"/><rect x="12" y="8" width="3" height="10"/><rect x="17" y="5" width="3" height="13"/></svg><span>Laporan</span></button>
+  <button class="nav" data-page="pengaturan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.63.8 1.05 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg><span>Pengaturan</span></button>
+  <button class="nav" data-page="backup"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg><span>Backup &amp; Restore</span></button>
+  <div class="sidebar-spacer"></div>
+  <div class="sidebar-footer">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/></svg>
+    <span>Jaga Alam, Jaga Masa Depan</span>
+  </div>
+</aside>
+
+<main class="main">
+<header class="topbar">
+  <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+  </button>
+  <div class="topbar-title"><h1 id="title">Dashboard</h1><p id="subtitle">Ringkasan usaha hari ini</p></div>
+  <div class="topbar-spacer"></div>
+  <div class="topbar-right">
+    <div class="clock">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+      <span id="clockText">-</span>
+    </div>
+    <div class="admin">
+      <button class="admin-btn" id="adminBtn">
+        <span class="admin-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+        Admin
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="admin-menu" id="adminMenu">
+        <button type="button" data-page="pengaturan">Pengaturan Toko</button>
+        <button type="button" data-page="backup">Backup &amp; Restore</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="dashboard" class="page active">
+  <div class="banner">
+    <img src="pict/banner.png" alt="Rongsok Jembar">
+</div>
+
+  <div class="stat-cards">
+    <div class="stat-card"><div class="stat-icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2 3h2l2.5 12.5a2 2 0 0 0 2 1.5h9a2 2 0 0 0 2-1.5L22 7H6"/></svg></div><div class="stat-body"><span>Total Pembelian (Hari Ini)</span><b id="dBuy">Rp 0</b><small id="dBuyMeta">0 Nota · 0 kg</small></div></div> 
+     <div class="stat-card"><div class="stat-icon purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h5"/></svg></div><div class="stat-body"><span>Jenis Barang</span><b id="dItemCount">0</b><small>Jenis</small></div></div>
+    <div class="stat-card"><div class="stat-icon purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z"/><path d="M9 13h6M9 17h6M9 9h1"/></svg></div><div class="stat-body"><span>Jumlah Transaksi (Hari Ini)</span><b id="dTrx">0</b><small>Nota</small></div></div>
+    <div class="stat-card"><div class="stat-icon teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 8L12 3 3 8l9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></div><div class="stat-body"><span>Total Stok Saat Ini</span><b id="dStockTotal">0 kg</b><small id="dStockMeta">0 Jenis Barang</small></div></div>
+  </div>
+
+  <div class="two">
+    <div class="panel">
+      <div class="head"><h2>Grafik Pembelian 7 Hari Terakhir</h2><div class="chart-legend"><span><i class="dot green"></i>Pembelian</span></div></div>
+      <div class="chart-wrap" id="chart"></div>
+    </div>
+    <div class="panel">
+      <h2>Stok Barang Terbanyak</h2>
+      <div id="topStock"></div>
+    </div>
+  </div>
+
+  <div class="two">
+    <div class="panel">
+      <div class="head"><h2>Transaksi Terbaru</h2><button class="link-btn" data-page="laporan">Lihat Semua</button></div>
+      <div class="table-wrap"><table><thead><tr><th>Tanggal</th><th>No. Nota</th><th>Jenis</th><th>Nama</th><th>Total</th><th>Aksi</th></tr></thead><tbody id="dRecent"></tbody></table></div>
+    </div>
+    <div class="panel">
+      <div class="head"><h2>Daftar Harga Barang</h2><button class="link-btn" data-page="harga">Kelola Harga</button></div>
+      <div class="table-wrap"><table><thead><tr><th>Nama Barang</th><th>Harga Beli/kg</th><th>Stok</th></tr></thead><tbody id="dPriceList"></tbody></table></div>
+    </div>
+  </div>
+</section>
+
+<section id="pembelian" class="page">
+<div class="panel"><div class="head"><h2>Nota Pembelian — Banyak Barang</h2><span class="badge" id="buyNo"></span></div>
+<div class="form-grid"><label>Tanggal<input type="date" id="buyDate"></label><label>Pemasok<input id="buyPartner" placeholder="Nama pemasok"></label></div>
+<div class="addline">
+<select id="buyItem"></select><input type="number" id="buyWeight" placeholder="Berat kg" min=".01" step=".01"><input type="number" id="buyPrice" placeholder="Harga/kg" min="0"><button class="btn" id="addBuy">+ Tambah</button>
+</div>
+<div class="table-wrap"><table><thead><tr><th>Barang</th><th>Berat</th><th>Harga/kg</th><th>Subtotal</th><th></th></tr></thead><tbody id="buyCart"></tbody></table></div>
+<div class="totals"><span>Total Berat: <b id="buyWeightTotal">0 kg</b></span><strong>Total: <span id="buyGrand">Rp 0</span></strong></div>
+<div class="pay"><label>Bayar<input type="number" id="buyPaid" min="0"></label><label>Kembalian<input id="buyChange" readonly></label><button class="btn" id="saveBuy">Simpan Nota Pembelian</button><button class="btn secondary" id="clearBuy">Kosongkan</button></div>
+</div>
+<div class="panel"><div class="head"><h2>Riwayat Nota Pembelian</h2><input class="search" id="buySearch" placeholder="Cari nomor/pemasok"></div><div class="table-wrap"><table><thead><tr><th>Nota</th><th>Tanggal</th><th>Pemasok</th><th>Item</th><th>Total</th><th>Aksi</th></tr></thead><tbody id="buyHistory"></tbody></table></div></div>
+</section>
+<section id="stok" class="page"><div class="panel"><div class="head"><h2>Stok Barang</h2><button class="btn" id="newItem">+ Barang</button></div><div class="table-wrap"><table><thead><tr><th>Barang</th><th>Stok kg</th><th>Harga Beli</th><th>Nilai Stok</th><th>Aksi</th></tr></thead><tbody id="stockTable"></tbody></table></div></div></section>
+<section id="harga" class="page"><div class="panel"><h2>Daftar Harga</h2><p class="muted">Harga beli per kilogram untuk setiap barang.</p><div id="prices"></div></div></section>
+<section id="laporan" class="page"><div class="panel"><div class="filters"><label>Dari<input type="date" id="from"></label><label>Sampai<input type="date" id="to"></label><button class="btn" id="runReport">Tampilkan</button><button class="btn secondary" id="printReport">Cetak</button></div></div><div class="cards"><div class="card"><span>Total Pembelian</span><b id="rBuy">Rp 0</b></div><div class="card"><span>Nota</span><b id="rTrx">0</b></div></div><div class="panel"><div class="table-wrap"><table><thead><tr><th>Nota</th><th>Tanggal</th><th>Tipe</th><th>Partner</th><th>Item</th><th>Total</th></tr></thead><tbody id="report"></tbody></table></div></div></section>
+<section id="pengaturan" class="page"><div class="panel"><h2>Pengaturan Toko</h2><form id="settings"><div class="form-grid"><label>Nama Usaha<input id="shopName"></label><label>No. Telepon<input id="shopPhone"></label><label>Alamat<textarea id="shopAddress"></textarea></label></div><button class="btn">Simpan</button><button type="button" class="btn danger" id="wipe">Hapus Semua Data</button></form></div></section>
+<section id="backup" class="page"><div class="panel"><h2>Backup &amp; Restore Data</h2><p class="muted">Simpan cadangan data usaha Anda, atau pulihkan dari file cadangan sebelumnya.</p><div class="backup-actions"><div class="info"><b>Backup Data</b><p>Unduh seluruh data transaksi, stok, dan pengaturan sebagai file JSON.</p><button class="btn" id="backup">Unduh Backup</button></div><div class="info"><b>Restore Data</b><p>Pulihkan data dari file backup (.json). Data saat ini akan digantikan.</p><button class="btn secondary" id="restoreBtn">Pilih File Restore</button><input hidden type="file" id="restoreFile" accept=".json"></div></div></div></section>
+
+<footer class="app-footer"><span>© 2026 Rongsok Jembar. All rights reserved.</span><span class="tagline">Jaga Alam, Jaga Masa Depan</span></footer>
+</main></div>
+
+<div class="modal" id="modal"><div class="modalbox"><div class="head"><h2 id="modalTitle">Barang</h2><button id="close">×</button></div><form id="itemForm"><input type="hidden" id="itemId"><label>Nama<input id="itemName" required></label><label>Harga Beli/kg<input type="number" id="itemBuy" min="0" required></label><button class="btn">Simpan</button></form></div></div>
+<div id="toast"></div>
+<script src="js/app.js"></script>
+</body></html>
