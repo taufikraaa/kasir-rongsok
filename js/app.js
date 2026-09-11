@@ -37,7 +37,7 @@ function defaultDB(){
       {id:uid(),name:"GRAM KUNINGAN",buy:90000,stock:0},
       {id:uid(),name:"GRAM BESI",buy:3000,stock:0},
       {id:uid(),name:"GRAM ALUMUNIUM",buy:15000,stock:0},
-      {id:uid(),name:"-----------------------------",buy:0,stock:0},
+      {id:uid(),name:"-------------------",buy:0,stock:0},
       {id:uid(),name:"TEMBAGA DANDANG",buy:120000,stock:0},
       {id:uid(),name:"TEMBAGA BAKAR",buy:175000,stock:0},
       {id:uid(),name:"TEMBAGA SUPER",buy:185000,stock:0},
